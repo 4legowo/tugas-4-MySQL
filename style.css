@@ -1,27 +1,35 @@
-.body { 
-    font-family: sans-serif; 
-    margin: 20px; 
+.table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
 }
-.form-group { 
-    margin-bottom: 15px; 
+
+.th, td {
+     border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
-.label { 
-    display: block; 
-    margin-bottom: 5px; 
+
+.th {
+    background-color: #f2f2f2;
 }
-.input, select { 
-    width: 300px; 
-    padding: 8px; 
+        
+.status-lunas {
+    color: green;
+    font-weight: bold;
 }
-.alert { 
-    padding: 10px; 
-    background-color: #4CAF50; 
-    color: white; 
-    margin-bottom: 15px; 
+
+.status-menunggu {
+    color: orange;
+    font-weight: bold;
 }
-.error { 
-    padding: 10px; 
-    background-color: #f44336; 
-    color: white; 
-    margin-bottom: 15px; 
+
+.status-batal {
+    color: red;
+    font-weight: bold;
 }
+
+    container {
+            padding: 20px;
+        }
+    

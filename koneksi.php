@@ -1,14 +1,14 @@
 <?php
-$servername = "localhost";
-$username = "root"; // ganti dengan username database Anda
-$password = ""; // ganti dengan password database Anda
-$dbname = "booking_lapangan";
+$host = '127.0.0.1'; 
+$dbname = 'booking_lapangan';
+$username = 'root'; 
+$password = ''; 
 
-// Buat koneksi
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Cek koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    /}
+    catch (PDOException $e) {
+    die("Koneksi database gagal: " . $e->getMessage());
 }
 ?>
