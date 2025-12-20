@@ -1,0 +1,25 @@
+REATE DATABASE booking_lapangan;
+
+USE booking_lapangan;
+
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_user VARCHAR(100) NOT NULL,
+    email_user VARCHAR(100) NOT NULL,
+    lapangan_id INT NOT NULL,
+    tanggal_booking DATE NOT NULL,
+    jam_mulai TIME NOT NULL,
+    jam_selesai TIME NOT NULL,
+    status VARCHAR(50) DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE lapangan (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_lapangan VARCHAR(100) NOT NULL,
+    lokasi VARCHAR(100)
+);
+
+INSERT INTO lapangan (nama_lapangan, lokasi) VALUES 
+('Lapangan A', 'Area 1'),
+('Lapangan B', 'Area 2');
